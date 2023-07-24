@@ -36,7 +36,9 @@ class Move(Rule):
         if word[self._position] == self._letter:
             return False
         pos = word.find(self._letter)
-        return (pos != -1) and (pos not in self._exceptions)
+        while pos in self._exceptions:
+            pos = word.find(self._letter, pos+1)
+        return pos != -1
     
     def __str__(self):
         return "Move {} from {}".format(self._letter, self._position)
