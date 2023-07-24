@@ -8,7 +8,7 @@
 import argparse
 
 parser = argparse.ArgumentParser(description="Reduce dictionary to words of the proper length.")
-parser.add_argument('-n', '--length', default=5, help="Length of words to keep.")
+parser.add_argument('-n', '--length', type=int, default=5, help="Length of words to keep.")
 parser.add_argument('infile', help="Input dictionary filename.")
 parser.add_argument('outfile', help="Output dictionary filename.")
 args = parser.parse_args()

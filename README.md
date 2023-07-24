@@ -6,15 +6,17 @@ must enter feedback for each word as one character per character in the words.  
 appear in that position (green in Wordle).  "m" (move) indicates the letter appears in the word but not in that position
 (yellow in Wordle).  "n" (not) indicates the letter does not appear again in the word (gray in Wordle).
 
+This has been tested with words of up to 11 letters.
+
 ## reduce.py
 Reduces the dictionary to words of the proper length.
 
 ## analyze.py
 Analyzes the words and assigns each word a score.  Words with the most common letters, and letters that most often
-appear in the same position most are weighted higher.  Words with duplicate letters are weighted lower.  Using this, the
-script finds "tares" as the first word to choose.  Intuitively this makes sense.  It has and "e", "t", and "a", the
-three most common letters in English.  It also ends in an "s" which is common as many words will be the plural form of
-four letter words.  Additionally, words ending in "es" are fairly common.
+appear in the same position most are weighted higher.  Words with duplicate letters are weighted lower.  Using this for
+5 letter words, the script finds "tares" as the first word to choose.  Intuitively this makes sense.  It has and "e",
+"t", and "a", the three most common letters in English.  It also ends in an "s" which is common as many words will be
+the plural form of four letter words.  Additionally, words ending in "es" are fairly common.
 
 ## guess.py
 Makes guesses at the Wordle solution.  The user must enter feedback for each word.  For each letter in the word, enter
