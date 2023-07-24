@@ -25,9 +25,11 @@ one of the following:
 
 If the word is not found by Wordle, simply press enter with no feedback.
 
-This also outputs a log, rules.log, for debugging.  The log contains all the words eliminated from consideration along
-with the reason they were removed.
+This works by building a set of rules based on the feedback.  It checks each word on the list against the rules and
+removes any words that violate a rule.  It then picks the word with the highest score as the next guess.  It also
+outputs a log, rules.log, for debugging.  The log contains all the words eliminated from consideration along with the
+reason they were removed.
 
 ## words_alpha.txt
-This word list is from https://github.com/dwyl/english-words, it is licenses under The Unlicense.
+This word list is from https://github.com/dwyl/english-words, it is licensed under The Unlicense.
 
